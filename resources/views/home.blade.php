@@ -31,15 +31,15 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row mt-5">
     <div class="col-4">
-      <img src="https://media.wired.com/photos/64daad6b4a854832b16fd3bc/master/pass/How-to-Choose-a-Laptop-August-2023-Gear.jpg" alt="photo" class="w-100">
+      <img src="https://media.wired.com/photos/64daad6b4a854832b16fd3bc/master/pass/How-to-Choose-a-Laptop-August-2023-Gear.jpg" alt="photo" class="w-100 px-3">
     </div>
     <div class="col-4">
-      <img src="https://media.wired.com/photos/64daad6b4a854832b16fd3bc/master/pass/How-to-Choose-a-Laptop-August-2023-Gear.jpg" alt="photo" class="w-100">
+      <img src="https://media.wired.com/photos/64daad6b4a854832b16fd3bc/master/pass/How-to-Choose-a-Laptop-August-2023-Gear.jpg" alt="photo" class="w-100 px-3">
     </div>
     <div class="col-4">
-      <img src="https://media.wired.com/photos/64daad6b4a854832b16fd3bc/master/pass/How-to-Choose-a-Laptop-August-2023-Gear.jpg" alt="photo" class="w-100">
+      <img src="https://media.wired.com/photos/64daad6b4a854832b16fd3bc/master/pass/How-to-Choose-a-Laptop-August-2023-Gear.jpg" alt="photo" class="w-100 px-3">
     </div>
   </div>
 </div>
