@@ -2,22 +2,45 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-3 p-5">
+      <img src="data:image/png;base64,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" alt="avatar" class="rounded-circle w-75 mx-5">
     </div>
+    <div class="col-9 pt-5">
+      <div>
+        <h1>freecodecamp</h1>
+      </div>
+      <div class="d-flex gap-5">
+        <div>
+          <strong>153</strong>
+          posts
+        </div>
+        <div>
+          <strong>250k</strong>
+          followers
+        </div>
+        <div>
+          <strong>212</strong>
+          following
+        </div>
+      </div>
+      <div class="pt-4 fw-bold">freeCodeCamp.org</div>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem cum quaerat, porro delectus natus, consequatur distinctio iste nihil nulla tempora expedita? Excepturi libero cum voluptatum quas corporis aspernatur dolore debitis.</p>
+      <div>
+        <a href="#" style="color: #002f9e;" class=" fw-bold link-underline link-underline-opacity-0">www.freecodecamp.org</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <img src="https://media.wired.com/photos/64daad6b4a854832b16fd3bc/master/pass/How-to-Choose-a-Laptop-August-2023-Gear.jpg" alt="photo" class="w-100">
+    </div>
+    <div class="col-4">
+      <img src="https://media.wired.com/photos/64daad6b4a854832b16fd3bc/master/pass/How-to-Choose-a-Laptop-August-2023-Gear.jpg" alt="photo" class="w-100">
+    </div>
+    <div class="col-4">
+      <img src="https://media.wired.com/photos/64daad6b4a854832b16fd3bc/master/pass/How-to-Choose-a-Laptop-August-2023-Gear.jpg" alt="photo" class="w-100">
+    </div>
+  </div>
 </div>
 @endsection
