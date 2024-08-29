@@ -1,8 +1,19 @@
 // Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
+@import url("https://fonts.bunny.net/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
+
+a {
+    color: #002f9e;
+    font-weight: bold;
+    text-decoration: none;
+    transition-duration: 300ms;
+
+    &:hover {
+        color: #3673ff;
+    }
+}
