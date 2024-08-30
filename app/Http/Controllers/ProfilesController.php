@@ -43,11 +43,15 @@ class ProfilesController extends Controller
       $image = $manager->read("storage/{$imagePath}");
       $image->cover(800, 800, 'center');
       $image->save();
+
+      $imageArray = ['image' => $imagePath];
     }
+
+
 
     auth()->user()->profile->update(array_merge(
       $data,
-      ['image' => $imagePath]
+      $imageArray ?? []
     ));
 
     return redirect('/profile/{$user->id}');
