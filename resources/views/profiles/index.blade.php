@@ -9,8 +9,14 @@
     <div class="col-9 pt-5">
       <div class="d-flex justify-content-between align-items-baseline">
         <h1>{{ $user->username }}</h1>
+        @can('update', $user->profile)
         <a href="/p/create">Add New Post</a>
+        @endcan
+
       </div>
+      @can('update', $user->profile)
+      <a href="/profile/{{$user->id}}/edit">Edit Profile</a>
+      @endcan
       <div class="d-flex gap-5">
         <div>
           <strong>{{ $user->posts->count() }}</strong>
@@ -34,8 +40,10 @@
   </div>
   <div class="row mt-5">
     @foreach($user->posts as $post)
-    <div class="col-4">
-      <img src="/storage/{{ $post->image }}" alt="photo" class="w-100 px-3">
+    <div class="col-4 pb-4">
+      <a href="/p/{{ $post->id }}">
+        <img src="/storage/{{ $post->image }}" alt="photo" class="w-100 px-3">
+      </a>
     </div>
     @endforeach
   </div>
