@@ -22,15 +22,15 @@
       @endcan
       <div class="d-flex gap-5">
         <div>
-          <strong>{{ $user->posts->count() }}</strong>
+          <strong>{{ $postCount }}</strong>
           posts
         </div>
         <div>
-          <strong>{{ $user->profile->followers->count() }}</strong>
+          <strong>{{ $followersCount }}</strong>
           followers
         </div>
         <div>
-          <strong>{{ $user->following->count() }}</strong>
+          <strong>{{ $followingCount }}</strong>
           following
         </div>
       </div>
