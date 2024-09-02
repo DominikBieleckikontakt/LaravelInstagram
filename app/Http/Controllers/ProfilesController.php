@@ -13,8 +13,8 @@ class ProfilesController extends Controller
 {
   public function index(\App\Models\User $user)
   {
-
-    return view('profiles/index', compact('user'));
+    $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
+    return view('profiles/index', compact('user', 'follows'));
   }
 
   public function edit(\App\Models\User $user)
